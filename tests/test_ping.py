@@ -5,9 +5,7 @@ from datetime import datetime
 
 def test_item_type_analyser():
     query = "itemInput=chocolates"
-    print(client, "client here")
     response = client.get(f"taxCal?{query}")
-    print(response, "fuck me in the ass")
     assert response.status_code == 200
     assert response.json() == {"item": "food"}
 
