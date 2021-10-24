@@ -11,28 +11,6 @@ Released under the MIT [License](./LICENSE)
 
 
 
-```bash
-## proceed with npm
-
-# 3. Install dependencies. Make sure npm is installed: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-npm install
-
-# 4. Serve with hot reload at localhost:8080
-npm run serve
-
-# 5. Build for production with minification
-npm run build
-```
-
-```bash
-## Lint - Autofixes by scans your code to find issues that can lead to bugs or inconsistencies and style
-
-# using yarn
-yarn lint
-
-# using npm
-npm run lint
-```
 
 ## Recommended VScode extensions (optional)
 - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)

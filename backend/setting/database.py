@@ -8,20 +8,21 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-db_user = os.getenv("DB_USER")
-db_pass = os.getenv("DB_PASS")
-db_name = os.getenv("DB_NAME")
-db_host = os.getenv("DB_HOST")
+user_name = os.getenv("DB_USER")
+password = os.getenv("DB_PASS")
+host =os.getenv("DB_HOST")
+database_name =  os.getenv("DB_NAME")
+
 
 
 def initialize_local_db():
-    url = URL(
-        drivername="mysql+pymysql",
-        username=db_user,
-        host=db_host,
-        password=db_pass,
-        database=db_name,
+    url = 'mysql://%s:%s@%s/%s?charset=utf8' % (
+    user_name,
+    password,
+    host,
+    database_name,
     )
+
     return sqlalchemy.create_engine(url)
 
 

@@ -47,27 +47,69 @@ This project uses number of open source projects to work properly:
 - [Vue Js] - Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.
 
 
-## Installation amd Starting Up
-This project can be run directly oon Docker.
-Please follow the following instructions:
-build docker-compose file
-and then run 
-
-to Build:
+## Installation
+This project is based on Python 3.8.
+To create a virtual environment following steps can be followed:
 ```sh
-docker-compose build
+python3 -m venv <youeENVname>
 ```
-To Run:
+To activate conda environment:
+```sh
+source <yourENVnam>/bin/activate
+```
+Install the required packages and libraries:
+
+```sh
+pip3 install -r requirements.txt
+```
+
+Copy .env.example to .env and set the environment variables accordingly.
+
+
+- DB_DATA_PATH - This is the path to mount the database data to, to persist it on your local machine
+It can either be a path /some/folder or just a string like db-data
+
+Environment Variables
+
+This project requires MySQL server to run on localhost.
+If local server is not available the said can be run on docker by running the following:
+
 ```sh
 docker-compose up -d
 ```
 
+
+## Starting up
+
+Change .env.example to .env
+
+Start script creates database and table in the mySql server and then the server is initiated
+```sh
+python3 start.py
+```
+
+## Running Frontend
+This project requires running frontend to work with the backend.
+NPM is required to start and install the required packages for the project. 
+
+To install all the dependencies please run the following:
+```sh
+npm install
+```
+
+to inititate the project for testing purposes:
+```sh
+npm run serve
+```
+
 ## Tests
-Tests can be performed for the backend by running the following command in the backend directory:
+Tests can be performed for the backend by running the following command:
 ```sh
  coverage run --branch -m pytest tests
 ```
 
+## Deloyement
+Backend can be deloyed on the docker but its advised to be run on the env.
 
 ## Difflibb for Item type analysis
 

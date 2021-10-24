@@ -49,7 +49,7 @@
               > {{ item }}
             </div>
             <div>> Sales Taxes: {{ receipts.SalesTax }}</div>
-            <div>> Total: {{ receipts.Total }}</div>
+            <div>> Total: {{ receipts.Total.toFixed(2) }}</div>
           </div>
         </div>
       </div>
