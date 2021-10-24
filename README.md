@@ -59,7 +59,7 @@ docker-compose build
 ```
 To Run:
 ```sh
-docker-compose up -d
+docker-compose up 
 ```
 
 ## Tests
