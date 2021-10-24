@@ -48,7 +48,7 @@ This project uses number of open source projects to work properly:
 
 
 ## Installation amd Starting Up
-This project can be run directly oon Docker.
+This project can be run directly on Docker.
 Please follow the following instructions:
 build docker-compose file
 and then run 
