@@ -62,6 +62,18 @@ To Run:
 docker-compose up 
 ```
 
+## Usage
+
+App can be accessed on :
+```sh
+localhost:8080
+```
+
+backend on :
+```sh
+localhost:8000/docs
+```
+
 ## Tests
 Tests can be performed for the backend by running the following command in the backend directory:
 ```sh
